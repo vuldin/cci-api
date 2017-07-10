@@ -17,7 +17,7 @@ export default async function (server) {
           .get('http://172.27.12.35:8009/cci/api/v1/subscriber/histdata')
           .query({
             aggr: 'd',
-            imsi: '272211221122000',
+            imsi: '234304100158328',
             timefrom: '20170601000000',
             timeto: '20170620000000'
           })
@@ -28,13 +28,13 @@ export default async function (server) {
       }
     })
   server.get('/history', (req, res) => {
-    res.header('Access-Control-Allow-Origin','*')
-    res.header('Access-Control-Allow-Headers','X-Requested-With')
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Headers', 'X-Requested-With')
     res.send(data)
   })
   server.post('/history', (req, res) => {
-    res.header('Access-Control-Allow-Origin','*')
-    res.header('Access-Control-Allow-Headers','X-Requested-With')
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Headers', 'X-Requested-With')
     res.send(data)
   })
 }
